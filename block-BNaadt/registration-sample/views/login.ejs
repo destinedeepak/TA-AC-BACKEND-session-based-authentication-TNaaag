@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header><h1>Sign In</h1></header>
+    <main>
+      <form action="" method="POST">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input
+              class="input"
+              type="email"
+              placeholder="Email input"
+              name="email"
+            />
+          </div>
+        </div>
+        <%if(error){%>
+          <p class="error"><%=error%></p>
+        <%}%>
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input
+              class="input"
+              type="password"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Log In</button>
+          </div>
+          <div class="control">
+            <a href="/users/register" class="button is-link is-light"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
