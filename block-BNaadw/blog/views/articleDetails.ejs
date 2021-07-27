@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/d95544a3bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section class="container details-sec">
+        <div class="titleAndAuthor center relative">
+          <h1 class="name"><%=article.title%></h1>
+          <h4 class="author"><span>By </span>Deepak Singh</h4>
+          <a href="/articles" class="floating-arrow"><i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+        <div class="details">
+          <p><%=article.description%></p>
+          <%article.tags.forEach((ele,i,arr)=>{%>
+          <a href="#" class="tag"><%=ele%></a>
+            <%if(i!==arr.length-1){%>
+             <small>,</small>
+            <%}%>
+          <%})%>
+          <div class="likes-dislikes">
+            <a href="/articles/<%=article.slug%>/like" class="icon"><i class="fas fa-thumbs-up"></i></a>
+            <span><%=article.likes%></span>
+            <a href="/articles/<%=article.slug%>/dislike" class="icon"
+              ><i class="fas fa-thumbs-down"></i
+            ></a>
+            <span><%=article.dislikes%></span>
+          </div>
+          <div class="edit-delete">
+            <a href="/articles/<%=article.slug%>/edit" class="btn btn-secondary"
+              >Edit</a
+            >
+            <a href="/articles/<%=article.slug%>/delete" class="btn btn-secondary"
+              >Delete</a
+            >
+          </div>
+          <div class="comments">
+              <h3>Comments</h3>
+              <form action="/comments/<%=article.id%>" method="POST" class="add-comment">
+                  <textarea name="content" rows="3"></textarea>
+                  <input class="btn-c btn" type="submit" value="Add">
+              </form>
+              <%article.comments.forEach(ele=>{%>
+                <p class="para">
+                    <%=ele.content%>
+                  </p>
+                 <a href="/comments/<%=ele.id%>/likes" class="icon-c"><i class="fas fa-thumbs-up"></i></a>
+                 <span><%=ele.likes%></span>
+                 <a href="/comments/<%=ele.id%>/dislikes" class="icon-c"><i class="fas fa-thumbs-down"></i></a>
+                 <span><%=ele.dislikes%></span>
+                 <a href="/comments/<%=ele.id%>/edit" class="btn-c btn">Edit</a>
+                 <a href="/comments/<%=ele.id%>/delete" class="btn-c btn">Delete</a>
+                 <hr>
+              <%})%>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom css  */
+/* index */
+/* bulma CDN  */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+.error {
+  color: red;
+  margin: .3rem 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* flex  */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: .6rem;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+  word-spacing: 2px;
+}
+.center {
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* header  */
+.header {
+  background-color: #7FFFD3;
+  padding: .5rem 2rem;
+}
+.navbar a, .nav a{
+  text-decoration: none;
+  margin-left: 1rem;
+  background-color: #f4511e;
+  color: black;
+  border-radius: 5px;
+}
+.sign-form{
+  width: 450px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 10px 1px black;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+/* form  */
+.form-sec {
+  box-shadow: 1px 1px 10px 1px grey;
+  padding: 2rem;
+}
+.btn {
+  margin: 1rem auto;
+  background-color: aquamarine;
+  border: 0;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+  color: #f4511e;
+  display: inline-block;
+  margin: 0;
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+.formEntry {
+  width: 100%;
+  padding: 8px;
+  margin-top: 1rem;
+  display: block;
+}
+
+.articles {
+  box-shadow: 1px 1px 10px 1px black;
+  padding: 0;
+  margin-top: 1rem;
+}
+.each-article {
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+.article-anchor {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+.btn-create {
+  width: 100%;
+  margin: 0;
+  width: 95.7%;
+  text-align: center;
+  display: block;
+}
+/* article details  */
+.details-sec {
+  box-shadow: 1px 1px 10px 0px grey;
+  padding-top: 0;
+}
+.titleAndAuthor {
+  background: rgb(156, 156, 156);
+  padding: 1rem;  
+}
+.name {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.details {
+ 
+  padding: 1rem;
+}
+.tag {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: .2rem;
+  color: rgb(18, 156, 110);
+}
+.likes-dislikes {
+  margin-top: 1rem;
+}
+.icon {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #909090;
+}
+.likes-dislikes span {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #424242;
+}
+.btn-secondary {
+  margin-top: 1rem;
+}
+/* edit  */
+.btn-primary {
+  margin-left: 15.5rem;
+  display: inline-block;
+}
+/* comments  */
+h3 {
+  font-size: 1.1rem;
+  color: rgb(90, 90, 236);
+  margin-bottom: .4rem;
+}
+.comments {
+  border-top: 1px solid black;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.para {
+  font-size: .9rem;
+  font-weight: 300;
+  color: #424242;
+}
+.icon-c {
+  margin-top: .5rem;
+  display: inline-block;
+  color: #909090;
+}
+.comments span {
+  margin-right: .5rem;
+}
+.btn-c {
+  width: 2rem;
+  font-size: .7rem;
+  font-weight: 300;
+  padding: 0.3rem 0.3rem;
+  background-color: rgb(151, 151, 233);
+  color: black;
+}
+
+.add-comment textarea{
+  width: 90%;
+}
+.add-comment input {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+/* edit comment  */
+.edit-comment-sec {
+  padding: 1rem;
+  box-shadow: 1px 1px 10px 1px grey;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.edit-comment-sec  textarea {
+  width: 90%;
+}
+.relative {
+  position: relative;
+}
+
+.floating-arrow{
+  position: absolute;
+  top: 1.35rem;
+  left: 1rem;
+  font-size: 2.5rem;
+  color: rgb(102, 102, 102);
+}
+

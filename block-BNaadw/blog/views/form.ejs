@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="form-sec container">
+      <h1>Add a new article</h1>
+      <form action="/articles" method="POST">
+        <input type="text" name="title" placeholder="Title" class="formEntry" />
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          class="formEntry"
+        />
+        <input
+          type="text"
+          name="tags"
+          placeholder="Add your tags in comma-separated"
+          class="formEntry"
+        />
+        <input
+          type="text"
+          name="author"
+          placeholder="Author"
+          class="formEntry"
+        />
+        <input
+          type="text"
+          name="address"
+          placeholder="Address"
+          class="formEntry"
+        />
+        <input class="btn" type="submit" value="Add" />
+      </form>
+      <div class="back">
+        <a href="/articles" class="btn">Back to Articles</a>
+      </div>
+    </section>
+  </body>
+</html>
