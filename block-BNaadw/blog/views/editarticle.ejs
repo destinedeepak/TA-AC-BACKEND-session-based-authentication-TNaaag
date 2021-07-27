@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section class="form-sec container">
+        <h1>Add a new article</h1>
+        <form action="/articles/<%=article.slug%>/update" method="POST">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            class="formEntry"
+            value="<%=article.title%>"
+          />
+          <input
+            type="text"
+            name="description"
+            placeholder="Description"
+            class="formEntry"
+            value="<%= article.description%>"
+          />
+          <input
+            type="text"
+            name="tags"
+            placeholder="Add your tags in
+          comma-separated"
+            class="formEntry"
+            value = <%=article.tags%>
+          />
+          <input
+            type="text"
+            name="author"
+            placeholder="Author"
+            class="formEntry"
+            value="<%= article.author%>"
+          />
+
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            class="formEntry"
+            value="<%=article.address%>"
+          />
+
+          <input class="btn center" type="submit" value="Update" />
+          <a href="/articles/<%=article.id%>" class="btn btn-primary">Back</a>
+          <a href="/articles" class="btn btn-prmary">Go to articles</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
