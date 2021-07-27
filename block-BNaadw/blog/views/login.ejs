@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+  </head>
+  <body>
+    <header class="header">
+        <nav class="nav flex">
+          <h1>Blog App</h1>
+          <ul class="flex">
+            <li><a class="btn" href="/users/register">Sign Up</a></li>
+            <li><a class="btn" href="/users/login">Log In</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+      <form class="sign-form" method="POST">
+        <%if(error){%>
+            <p class="error"><%=error%></p>
+            <%}%>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input
+              class="input"
+              type="email"
+              placeholder="Email input"
+              name="email"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input
+              class="input"
+              type="password"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="btn is-link">Log In</button>
+          </div>
+          <div class="control">
+            <a href="/users/register" class="btn is-link is-light"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

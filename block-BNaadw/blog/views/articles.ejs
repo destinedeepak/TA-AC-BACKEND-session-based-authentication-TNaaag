@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Articles</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar flex">
+        <h1>Blog App</h1>
+        <ul class="flex">
+          <p class="fullname"><%=fullName%></p>
+          <li><a class="btn" href="/users/logout">Log out</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h2>List of Articles</h2>
+      <section class="articles">
+        <%articles.forEach(ele=>{%>
+        <div class="each-article">
+          <a href="/articles/<%=ele.slug%>" class="article-anchor"><%=ele.title%></a>
+        </div>
+        <%})%>
+        <a href="/articles/new" class="btn btn-create">Add Article</a>
+      </section>
+    </main>
+  </body>
+</html>
