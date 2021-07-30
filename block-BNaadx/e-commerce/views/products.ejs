@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>E-Commerce</title>
+</head>
+<body>
+    <header class="container flex space-between">
+        <a class="brand-name" href="">E-commerce</a>
+        <navbar class="navbar">
+            <a href="/" class="btn">Home</a>
+            <a href="/logout" class="btn">Logout</a>
+        </navbar>
+      </header>
+    <main>
+        <section class="products">
+            <%products.forEach(ele=>{%>
+                <article class="each-product">
+                    <a href="/products/<%=ele.id%>"><%=ele.name%></a>
+                </article>
+            <%})%>
+            <a href="/products/new" class="add-btn">Add new item</a>
+        </section>
+    </main>
+    <footer class="container">
+        <p>&copy; e-commerce</p>
+      </footer>
+</body>
+</html>

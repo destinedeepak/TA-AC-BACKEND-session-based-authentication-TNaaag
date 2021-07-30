@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://kit.fontawesome.com/d95544a3bc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="index">
+    <h1>Welcome to <%= title %></h1>
+    <%if(error){%>
+      <p class="error margin-top"><%=error%></p>
+      <%}%>
+    <div class="sign-box relative">
+      <h3>Admin</h3>
+      <a href="/admins/signup">Sign Up</a><br>
+      <a href="/admins/login">Sign In</a>
+    </div>
+    <div class="sign-box relative">
+      <h3>User</h3>
+      <a href="/users/signup">Sign Up</a><br>
+      <a href="/users/login">Sign In</a>
+    </div>
+    </section>
+    <section class="go-to">
+      <a href="/products">Go to products <i class="fas fa-arrow-right"></i></a>
+    </section>
+  </body>
+</html>
