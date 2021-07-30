@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/d95544a3bc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h2>E-Commerce</h2>
+    </header>
+    <main>
+      <section class="sign-section">
+        <form class="sign-form" method="POST">
+          <h3>User</h3>
+          <%if(error){%>
+          <p class="error"><%=error%></p>
+          <%}%>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input
+                class="input"
+                type="email"
+                placeholder="Email input"
+                name="email"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input
+                class="input"
+                type="password"
+                placeholder="Password"
+                name="password"
+              />
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="btn is-link is-light">
+                Sign In
+              </button>
+            </div>
+            <div class="control">
+              <a href="/" class="btn is-link is-light">Back to Home</a>
+            </div>
+          </div>
+        </form>
+        <div class="go-to">
+            <a href="/users/signup">Create an account <i class="fas fa-arrow-right"></i></a>
+          </div>
+      </section>
+    </main>
+  </body>
+</html>

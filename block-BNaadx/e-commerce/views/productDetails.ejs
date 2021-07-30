@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/d95544a3bc.js" crossorigin="anonymous"></script>
+    <title>E-Commerce</title>
+</head>
+<body>
+    <header class="container flex space-between">
+        <a class="brand-name" href="">E-commerce</a>
+      </header>
+    <main>
+        <section class="products">
+                <article class="each-product relative">
+                    <article class="product">
+                        <h2 class="center"><%=product.name%></h2>
+                        <h5><span>Quantity:</span><%=product.quantity%></h5>
+                        <h6><span>Price: Rs.</span><%=product.price%></h6>
+                        <p><a href="/products/<%=product.id%>/like"><i class="fas fa-thumbs-up"></i></a><%=product.like%></p>
+                        <a href="/products/<%=product.id%>/edit" class="btn">Edit</a>
+                        <a href="/products/<%=product.id%>/delete" class="btn">Delete</a>
+                        <a href="/products" class="btn">Back to products</a>
+                        <div class="add-to-cart">
+                            <input type="number" value="1">
+                            <a href="/">Add to Cart</a>
+                        </div>
+                    </article>
+                </article>
+        </section>
+        <section class="go-to">
+            <%if(error){%>
+                <p class="error"><%=error%></p>
+            <%}%>
+        </section>
+    </main>
+    <footer class="container">
+        <p>&copy; e-commerce</p>
+      </footer>
+</body>
+</html>

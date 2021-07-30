@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Event Management</title>
+  </head>
+  <body class="vh100">
+    <header class="container flex space-between">
+      <a class="brand-name" href="">E-commerce</a>
+    </header>
+    <main>
+      <section class="form-sec form-container">
+        <h2>Update an item</h2>
+        <form action="/products/<%=product.id%>/update" method="POST">
+          <!-- title  -->
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Name" name="name" value="<%=product.name%>" >
+            </div>
+          </div>
+          <!-- quantity  -->
+          <div class="field">
+            <label class="label">Quantity</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Quantity" name="quantity" value="<%=product.quantity%>">
+            </div>
+          </div>
+          <!-- price  -->
+          <div class="field">
+            <label class="label">Price</label>
+            <div class="control">
+              <input class="input" type="number" placeholder="Rs." name="price" value="<%=product.price%>">
+            </div>
+          </div>
+          <!-- submit  -->
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" type="submit">Update</button>
+            </div>
+            <div class="control">
+              <a href="./" class="button is-link is-light"
+                >Back to Product</a
+              >
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="container">
+      <p>&copy; e-commerce</p>
+    </footer>
+  </body>
+</html>
